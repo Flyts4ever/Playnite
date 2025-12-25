@@ -1,14 +1,15 @@
 Id: xenia
 Name: Xenia
-Website: 'https://xenia.jp/'
+Website: "https://xenia.jp/"
 Profiles:
   - Name: Default
-    StartupArguments: '"{ImagePath}"'
-    Platforms: [xbox360]
-    ImageExtensions: [iso, xex, cci, cxi, elf, zar, <none>]
     StartupExecutable: ^xenia\.exe$
-  - Name: Canary
-    StartupArguments: '"{ImagePath}"'
+    StartupArguments: "{ImagePath}"
     Platforms: [xbox360]
-    ImageExtensions: [iso, xex, cci, cxi, elf, zar, <none>]
+    ScriptGameImport: true
+
+  - Name: Canary
     StartupExecutable: ^xenia_canary\.exe$
+    StartupArguments: "{ImagePath}"
+    Platforms: [xbox360]
+    ScriptGameImport: true
